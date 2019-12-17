@@ -21,4 +21,4 @@
 3.  支持客服功能
 
 #### 扫码体验
-![输入图片说明](https://github.com/lhl0705/calendar-master/blob/master/calendar-master/images/qrcode.jpg "qrcode.jpg")
+![image](https://github.com/lhl0705/calendar-master/blob/master/calendar-master/images/qrcode.jpg)
