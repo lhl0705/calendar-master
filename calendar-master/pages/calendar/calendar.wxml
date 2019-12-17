@@ -1,0 +1,86 @@
+
+<view class="box" wx:if="{{SHOW_TOP}}">
+  <view class='arrow'></view>
+  <view class='body' bindtap='showModal'>
+    <text>{{text}}</text>
+  </view>
+</view>
+
+<view class="calendar-root">
+
+    <view class="calendar-navbar">
+        <view class="calendar-navbar-button" bindtap="goToday" hover="true" hover-class="view-hover">今日</view>
+        <view class="calendar-navbar-button" bindtap="goLastMonth" hover="true" hover-class="view-hover">{{"<"}}</view>
+        <view class="calendar-navbar-date">{{dateData.date}}</view>
+        <view class="calendar-navbar-button" bindtap="goNextMonth" hover="true" hover-class="view-hover">{{">"}}</view>
+        <picker class="calendar-navbar-button" mode="date" start="1900-01-01" end="2100-01-01" bindchange="bindDateChange">
+            <view hover="true" hover-class="view-hover">跳转</view>
+        </picker>
+    </view>
+    <view class="calendar-head">
+        <view wx:for="一二三四五六日" wx:key="*this">{{item}}</view>
+    </view>
+    <view class="calendar-body">
+        <view class="calendar-body-rows" wx:for="123456" wx:for-index="row" wx:key="*this" >
+            <view class="calendar-body-cols" wx:for="1234567" wx:for-index="col" wx:key="*this" bindtouchstart="touchStart" bindtouchend="touchEnd">
+                <view class="calendar-body-item {{row * 7 + col==select? 'select':''}}" hover="true" hover-class="view-hover" data-day-index="{{row * 7 + col}}" bindtap="selectDay">
+                    <view hidden="{{!dateData.arrIsShow[row * 7 + col]}}">
+                        <view class="calendar-body-day">
+                            {{dateData.arrDays[row * 7 + col]}}
+                        </view>
+                        <view class="calendar-body-dayex">
+                            {{dateData.arrInfoExShow[row * 7 + col]}}
+                        </view>
+                        <view class="calendar-body-workturn" style="color:{{workTurnData.arrWorkTurn[row * 7 + col] === '休' ? '#09BB07' : '#e64340'}}" hidden="{{!isWorkTurn}}">
+                            {{workTurnData.arrWorkTurn[row * 7 + col]}}
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="calendar-workturn-type-picker" style=""  hover="true" hover-class="view-hover">
+            <view style="position:absolute;line-height:60rpx;left:200rpx;font-size:30rpx;">
+            <text>滑到底部设置倒班信息</text>
+            </view>
+        </view>
+    <view class="g-gap1"></view>
+    <view class="g-gap1"></view>
+    <view class="calendar-detail">
+    
+        <view class="calendar-detail-day">{{detailData.curDay}}</view>
+        <view class="calendar-detail-info1">{{detailData.curInfo1}}</view>
+        <view class="calendar-detail-info2">{{detailData.curInfo2}}</view>
+        <view class="calendar-detail-info3" hidden="{{!isWorkTurn}}" style="color:{{detailData.curInfo3 === '休' ? '#09BB07' : '#e64340'}}">{{detailData.curInfo3}}</view>
+    </view>
+    <view class="g-gap1"></view>
+    <button type="primary" open-type="share"> 点此分享给朋友对比你们的日历 </button>
+    
+    <view class="calendar-workturn">
+        <picker bindchange="bindWorkTurnDatePickerChange" mode="date" value="{{date}}" start="2000-01-01" end="2050-12-31">
+        
+            <view class="calendar-workturn-date-picker" hover="true" hover-class="view-hover">
+                <image style="position:absolute;top:13rpx;left:40rpx;width:34rpx;height:34rpx;" src="../../images/clock.png"></image>
+                
+                <view style="position:absolute;line-height:60rpx;left:90rpx;font-size:34rpx;">开始上班日期：{{workTurnData.startWorkDateString}}</view>
+                <image style="position:absolute;top:13rpx;right:40rpx;width:15rpx;height:34rpx;" src="../../images/arrow-right.png"></image>
+            </view>
+        </picker>
+        <view class="calendar-workturn-type-picker" bindtap="bindWorkTurnTypeTap" hover="true" hover-class="view-hover">
+            <image style="position:absolute;top:13rpx;left:40rpx;width:34rpx;height:34rpx;" src="../../images/setting.png"></image>
+            <view style="position:absolute;line-height:60rpx;left:90rpx;font-size:34rpx;">
+            {{workTurnTypeName.length===0||workTurnTypeName==='不显示倒班信息'?'设置倒班方式':'当前为:'+workTurnTypeName}}
+            </view>
+            <image style="position:absolute;top:13rpx;right:40rpx;width:15rpx;height:34rpx;" src="../../images/arrow-right.png"></image>
+        </view>
+    </view>
+    <view style="height:140rpx;"></view>
+</view>
+
+
+<view class="kefu-box">
+<button  open-type="contact" class="kefu-body">
+    <image class="img" src="/images/ai-chat.png"></image>
+    <text class="q-tx">在线客服</text>
+</button>
+</view>

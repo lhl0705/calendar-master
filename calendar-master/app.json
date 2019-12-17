@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/calendar/calendar",
+    "pages/setting/setting",
+    "pages/aboutUs/index",
+    "pages/options/index",
+    "pages/user/index",
+    "pages/more/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "倒班大师",
+    "navigationBarTextStyle": "black"
+  },
+    "navigateToMiniProgramAppIdList": [
+      "wxb0c6b4a5f42bca7b",
+      "wxf16de6aeda02b694",
+      "wx2fc596adfeab9005",
+      "wx5f603a92db714ac9"
+      
+    ],
+  "tabBar": {
+    "color": "#353535",
+    "selectedColor": "#09BB07",
+    "list": [
+      {
+        "text": "日历",
+        "pagePath": "pages/calendar/calendar",
+        "iconPath": "images/calendar-normal.png",
+        "selectedIconPath": "images/calendar-selected.png"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "text": "我的",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/user-activite.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

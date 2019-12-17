@@ -1,0 +1,8 @@
+<view style="font-family:simhei;">
+    <view style="text-align:center; margin-top:100rpx;margin-bottom:30rpx;">
+        <image style="width:200rpx;height:200rpx;" src="../../images/logo.jpg"></image>
+    </view>
+    <view class="about-content">
+        这个小程序可以快速计算倒休情况，设置好开始上班的日期和倒班方式，即可在日历上显示倒休的信息。如果您有什么建议和反馈都可以联系作者。
+</view>
+</view>
