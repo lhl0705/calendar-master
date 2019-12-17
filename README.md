@@ -21,4 +21,5 @@
 3.  支持客服功能
 
 #### 扫码体验
+微信搜索[倒班大师]或者扫码
 ![image](https://github.com/lhl0705/calendar-master/blob/master/calendar-master/images/qrcode.jpg)
