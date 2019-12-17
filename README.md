@@ -22,4 +22,4 @@
 
 #### 扫码体验
 
-[扫码体验](https://gitee.com/lvhongli/calendar-master/blob/master/calendar-master/images/qrcode.jpg)
+[https://gitee.com/lvhongli/calendar-master/blob/master/calendar-master/images/qrcode.jpg](https://gitee.com/lvhongli/calendar-master/blob/master/calendar-master/images/qrcode.jpg)
