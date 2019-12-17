@@ -21,5 +21,4 @@
 3.  支持客服功能
 
 #### 扫码体验
-
-[https://gitee.com/lvhongli/calendar-master/blob/master/calendar-master/images/qrcode.jpg](https://gitee.com/lvhongli/calendar-master/blob/master/calendar-master/images/qrcode.jpg)
+![倒班大师](https://gitee.com/lvhongli/calendar-master/blob/master/calendar-master/images/qrcode.jpg "倒班大师")
